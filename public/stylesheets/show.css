@@ -1,0 +1,73 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+main {
+  	margin-left: 13rem;
+  	padding: 1rem;
+ 	
+}
+#header{
+	margin-left: 3rem;
+}
+#myList{
+	width:100vw;
+	height:3rem;
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	background: #f7f7f7;
+	list-style: none;
+	margin-top:1rem;
+}
+input#createaccount:checked {
+    background-color: #253849;
+    box-shadow: inset 0px 0px 0px 5px #ffffff;
+    transition: 0.5s;
+}
+
+input#createaccount{
+    position: relative;
+	top:0.70rem;
+    margin-left: 4px;
+    width: calc(1.5rem - 4px);
+    height: calc(1.5rem - 4px);
+    float: left;
+	margin: 4px 10px 20px 1px;
+    border-radius: 50%;
+    vertical-align: center;
+    border: 2px solid #295282;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#text{
+	
+	font-size:1.5rem; 
+}
+#dueDate{
+	display:block;
+	font-size:1rem;
+}
+form button{
+	background: #e74c3c;
+	height: 50px;
+	text-align: center;
+	color: white;
+	width: 0px;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+	float:left;
+	padding-bottom:13px;
+	margin:0;
+}
+li:hover button{
+	width: 50px;
+	opacity: 1.0;
+	margin-right:10px;
+}
+.fa-trash{
+	text-align: center;
+	position:relative;
+    top: calc(50% - 10px);
+}

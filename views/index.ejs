@@ -1,0 +1,24 @@
+<%- include("./partials/header") %>
+<main>
+	<div id="container">
+		<h1 id="header">
+			TO DO LIST
+			<span id="toggleForm"><i class="far fa-edit"></i></span>
+		</h1>
+		<% tasks.forEach(function(task){%>
+			<ul>
+				<li id="myList">
+					<form class="inlineForm" action="/events/<%=task._id%>?_method=DELETE" method="POST">
+						<button type="submit" >
+							<i class="fas fa-trash"></i>
+						</button>
+					</form>
+					<input class="input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1">
+					<div id="text"><%= task.task%> <span id="dueDate"><%=task.date%></span></div>
+				</li>
+			</ul>
+		<% })%>	
+	</div>
+</main>
+
+<%- include("./partials/footer") %>
