@@ -22,6 +22,6 @@ app.get("/",function(req,res){
 app.use("/events", eventRoutes);
 
 var port = process.env.PORT || 3000;
-app.listen(port,function(){
-	console.log("server started")
+app.listen(port, function () {
+	console.log("Server Has Started!");
 });
