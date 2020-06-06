@@ -6,7 +6,9 @@ var methodOverride = require("method-override");
 
 var eventRoutes    = require("./routes/event");
 
-mongoose.connect( "mongodb://localhost:27017/event_list",{useNewUrlParser: true, useUnifiedTopology: true});
+
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/event_list";
+mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
